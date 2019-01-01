@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="eCare_Recorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ooq-Pf-eWJ">
+                                <rect key="frame" x="137" y="20" width="140" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="NXW-3I-4UK"/>
+                                    <constraint firstAttribute="height" constant="73" id="dbU-6V-g4K"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3T-ko-Cgd">
+                                <rect key="frame" x="146" y="122" width="122" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="録音する"/>
+                                <connections>
+                                    <action selector="actionStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cPM-eM-evr"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WVJ-Qw-7IG">
+                                <rect key="frame" x="87" y="101" width="240" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="録音中" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ia6-c8-wyd">
+                                        <rect key="frame" x="60" y="29" width="120" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ffN-4O-oqJ">
+                                        <rect key="frame" x="12" y="74" width="216" height="2"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="216" id="zJd-Uk-Teh"/>
+                                        </constraints>
+                                    </progressView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaS-uf-JuC">
+                                        <rect key="frame" x="92" y="87" width="56" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ia6-c8-wyd" firstAttribute="leading" secondItem="WVJ-Qw-7IG" secondAttribute="leading" constant="60" id="9gp-SQ-TTE"/>
+                                    <constraint firstItem="ia6-c8-wyd" firstAttribute="top" secondItem="WVJ-Qw-7IG" secondAttribute="top" constant="29" id="B3e-0v-hgj"/>
+                                    <constraint firstItem="ffN-4O-oqJ" firstAttribute="leading" secondItem="WVJ-Qw-7IG" secondAttribute="leading" constant="12" id="Ca6-WY-ZL2"/>
+                                    <constraint firstItem="FaS-uf-JuC" firstAttribute="centerX" secondItem="WVJ-Qw-7IG" secondAttribute="centerX" id="GlB-GU-DDs"/>
+                                    <constraint firstItem="ia6-c8-wyd" firstAttribute="centerX" secondItem="WVJ-Qw-7IG" secondAttribute="centerX" id="Hr4-am-T5c"/>
+                                    <constraint firstAttribute="bottom" secondItem="FaS-uf-JuC" secondAttribute="bottom" constant="20" id="O56-Xs-4g0"/>
+                                    <constraint firstItem="FaS-uf-JuC" firstAttribute="top" secondItem="WVJ-Qw-7IG" secondAttribute="top" constant="87" id="OnH-PT-dVd"/>
+                                    <constraint firstItem="ffN-4O-oqJ" firstAttribute="top" secondItem="ia6-c8-wyd" secondAttribute="bottom" constant="9" id="URt-ET-o8g"/>
+                                    <constraint firstAttribute="height" constant="150" id="VNX-gq-XwJ"/>
+                                    <constraint firstAttribute="width" constant="240" id="vyu-Eh-XGQ"/>
+                                    <constraint firstItem="ia6-c8-wyd" firstAttribute="centerX" secondItem="ffN-4O-oqJ" secondAttribute="centerX" id="xbZ-dM-wPb"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sound.png" translatesAutoresizingMaskIntoConstraints="NO" id="dOo-GP-yJU">
+                                <rect key="frame" x="49" y="259" width="47" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="1WB-FP-IQr"/>
+                                    <constraint firstAttribute="width" constant="47" id="5Sc-h1-6Hj"/>
+                                    <constraint firstAttribute="height" constant="46" id="ThD-rX-dMP"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="47" id="lDg-tm-VU8"/>
+                                </constraints>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZDZ-wB-B2r">
+                                <rect key="frame" x="104" y="281" width="262" height="2"/>
+                            </progressView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="スマートフォンのマイクに向けて心電図計をセットし録音してください。" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSm-5j-HZQ">
+                                <rect key="frame" x="5" y="315" width="404" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="7r1-NH-FhQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inst.png" translatesAutoresizingMaskIntoConstraints="NO" id="GGT-XQ-Wel">
+                                <rect key="frame" x="0.0" y="378" width="414" height="358"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GGT-XQ-Wel" secondAttribute="height" multiplier="207:179" id="UVJ-m7-zSV"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WVJ-Qw-7IG" firstAttribute="top" secondItem="ooq-Pf-eWJ" secondAttribute="bottom" constant="8" id="27t-fw-8ng"/>
+                            <constraint firstItem="ooq-Pf-eWJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6T0-X6-Z4i"/>
+                            <constraint firstItem="GGT-XQ-Wel" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="An5-IO-f2Y"/>
+                            <constraint firstItem="dOo-GP-yJU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="49" id="C8t-XZ-jmy"/>
+                            <constraint firstItem="ZDZ-wB-B2r" firstAttribute="top" secondItem="WVJ-Qw-7IG" secondAttribute="bottom" constant="30" id="Gnb-mX-k8r"/>
+                            <constraint firstItem="ZDZ-wB-B2r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="84" id="Lm7-25-JlJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZDZ-wB-B2r" secondAttribute="trailing" constant="28" id="NlO-WZ-2yl"/>
+                            <constraint firstItem="nSm-5j-HZQ" firstAttribute="centerX" secondItem="Q3T-ko-Cgd" secondAttribute="centerX" id="OES-oW-esb"/>
+                            <constraint firstItem="GGT-XQ-Wel" firstAttribute="top" secondItem="nSm-5j-HZQ" secondAttribute="bottom" constant="21" id="RIM-PU-6pY"/>
+                            <constraint firstItem="ooq-Pf-eWJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wwr-by-C9J"/>
+                            <constraint firstItem="dOo-GP-yJU" firstAttribute="top" secondItem="WVJ-Qw-7IG" secondAttribute="bottom" constant="8" id="j1r-Bq-KFk"/>
+                            <constraint firstItem="WVJ-Qw-7IG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kvb-z0-OgM"/>
+                            <constraint firstItem="GGT-XQ-Wel" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mZo-OQ-F7v"/>
+                            <constraint firstItem="nSm-5j-HZQ" firstAttribute="top" secondItem="dOo-GP-yJU" secondAttribute="bottom" constant="10" id="rhm-rr-myU"/>
+                            <constraint firstItem="nSm-5j-HZQ" firstAttribute="centerX" secondItem="WVJ-Qw-7IG" secondAttribute="centerX" id="vdL-PR-I9j"/>
+                            <constraint firstItem="Q3T-ko-Cgd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="102" id="vja-gx-Zxo"/>
+                            <constraint firstItem="nSm-5j-HZQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="zIu-tJ-NCo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="levelMeter" destination="ZDZ-wB-B2r" id="NLP-jN-oyn"/>
+                        <outlet property="progress_meter" destination="ffN-4O-oqJ" id="YYt-mm-ccQ"/>
+                        <outlet property="progress_time" destination="FaS-uf-JuC" id="NdY-KP-inK"/>
+                        <outlet property="recording_view" destination="WVJ-Qw-7IG" id="0rG-vV-gNk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36.231884057971016" y="25.271739130434785"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="inst.png" width="210" height="238"/>
+        <image name="logo.png" width="140" height="73"/>
+        <image name="sound.png" width="23" height="23"/>
+    </resources>
+</document>

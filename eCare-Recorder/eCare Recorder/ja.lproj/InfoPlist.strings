@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  eCare Recorder
+
+  Created by 倉橋浩一 on 2018/12/25.
+  Copyright © 2018 cardguard jp. All rights reserved.
+*/
+
+
+"NSMicrophoneUsageDescription" = "このアプリでは心電図計からの信号を記録するためにマイクを使用する必要があります。";

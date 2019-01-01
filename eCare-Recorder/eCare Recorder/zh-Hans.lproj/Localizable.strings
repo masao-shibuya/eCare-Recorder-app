@@ -1,0 +1,11 @@
+/*
+ Localizable.strings
+ eCare Recorder
+ 
+ Created by nodeworks on 2014/06/30.
+ Copyright (c) 2014年 Card Guard Japan Limited. All rights reserved.
+ */
+
+"mail_ok" = "邮件发送成功。";
+"mail_ng" = "出现错误, 邮件无法发送。";
+"mail_allow" = "请允许使用电子邮件。";
